@@ -48,16 +48,22 @@ body {
 }
 
 section.main-visual {
-    width: 100vw;
     color: #e6e6e6;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
 }
 
 section > div {
     width: 100vw;
     text-align: center;
+}
+
+#drop-area {
+    color: grey;
+    width: 50%;
+    background-color: white;
 }
