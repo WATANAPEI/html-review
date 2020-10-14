@@ -52,7 +52,12 @@ section.main-visual {
     color: #e6e6e6;
     height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
 
+}
+
+section > div {
+    width: 100vw;
+    text-align: center;
 }
