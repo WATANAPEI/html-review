@@ -22,7 +22,7 @@ function drop(e) {
 
     const dt = e.dataTransfer
     const files = dt.files
-    drop_area.append(files[0].name);
+    drop_area.append("<p>" + files[0].name + "<\p>");
 
 
 }
