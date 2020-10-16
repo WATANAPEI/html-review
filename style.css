@@ -47,18 +47,30 @@ body {
     background-image: url("main_visual.jpg")
 }
 
-section.main-visual {
+main.main-visual {
     color: #e6e6e6;
+    display: grid;
+    grid-template-columns:
+        1fr
+        min(100ch, 100%)
+        1fr;
+    margin: 70px 0;
+    /*
+    width: 80vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    */
 
 }
+main.main-visual > * {
+    grid-column: 2;
+}
 
-section > div {
-    width: 100vw;
+section {
+    background-color: cadetblue;
     padding: 20px;
     text-align: center;
 }
