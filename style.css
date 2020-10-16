@@ -59,10 +59,11 @@ section.main-visual {
 
 section > div {
     width: 100vw;
+    padding: 20px;
     text-align: center;
 }
 
-div#accordion > ul > li {
+div#accordion li {
     width: 100%;
     text-align: center;
     list-style: none;
@@ -73,4 +74,29 @@ div#accordion > ul > li {
     color: grey;
     width: 50%;
     background-color: white;
+}
+
+.acd-check {
+    display: none;
+}
+
+label.acd-label {
+    color: black;
+    width: 50%;
+    background-color: azure;
+}
+
+.acd-item {
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.acd-check:checked + .acd-label + .acd-item {
+    background-color: white;
+    color: black;
+    height: 50px;
+    opacity: 1;
+    visibility: visible;
 }
