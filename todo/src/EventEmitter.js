@@ -8,7 +8,7 @@ export class EventEmitter {
             this._listeners.set(type, new Set());
         }
         const listenerSet = this._listeners.get(type);
-        listenerSet.set(listener);
+        listenerSet.add(listener);
     }
 
     emit(type) {
@@ -30,7 +30,7 @@ export class EventEmitter {
             if(ownListener === listener) {
                 listenerSet.delete(listener);
             }
-        })
+        });
 
     }
 }
