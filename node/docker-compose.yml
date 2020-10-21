@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+    node:
+        build: .
+        container_name: "node"
+        volumes:
+            - type: volume
+              source: out_node
+              target: /www/app/node/
+        networks:
+            - mynet
+
+volumes:
+    out_node:
+        external: true
+
+networks:
+    mynet:
+        external: true
