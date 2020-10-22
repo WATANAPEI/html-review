@@ -1,0 +1,18 @@
+{
+  "name": "mynode",
+  "version": "0.0.1",
+  "description": "node review project",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WATANAPEI/html-review.git"
+  },
+  "author": "shumpei WATANABE",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
