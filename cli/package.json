@@ -15,6 +15,7 @@
     "commander": "^6.2.0"
   },
   "dependencies": {
+    "marked": "^1.2.2",
     "reload": "^3.1.1"
   }
 }
