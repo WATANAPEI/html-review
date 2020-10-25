@@ -4,16 +4,9 @@ services:
         build: .
         container_name: "node"
         volumes:
-            - type: volume
-              source: out_node
-              target: /www/app/node/
-        networks:
-            - mynet
-
-volumes:
-    out_node:
-        external: true
-
-networks:
-    mynet:
-        external: true
+            - .:/home/app
+            - /home/app/node_modules
+        ports:
+            - '8080:8080'
+        command:
+            "npx http-server -p 8080"

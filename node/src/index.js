@@ -1,7 +1,7 @@
 async function main() {
     try {
         const userid = getUserId();
-        const userInfo = fetchUserInfo("js-primer-example");
+        const userInfo = await fetchUserInfo(userid);
         const view = createView(userInfo);
         displayView(view);
     } catch(error) {

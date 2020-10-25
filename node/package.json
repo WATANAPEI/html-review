@@ -4,15 +4,16 @@
   "description": "node review project",
   "main": "index.js",
   "private": true,
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/WATANAPEI/html-review.git"
   },
   "author": "shumpei WATANABE",
   "devDependencies": {
+    "http-server": "0.12.3"
   },
   "dependencies": {
+    "reload": "^3.1.1"
   }
 }
