@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+    infinite-scroll:
+        build: .
+        container_name: "infinite-scroll"
+        volumes:
+            - .:/home/app
+            - /home/app/node_modules
+        ports:
+            - '8080:8080'
+        command:
+            "npx http-server -p 8080"
