@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+    cli:
+        build: .
+        container_name: "cli"
+        volumes:
+            - .:/home/app
+            - /home/app/node_modules
+        ports:
+            - '8080:8080'

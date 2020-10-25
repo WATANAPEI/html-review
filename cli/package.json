@@ -1,0 +1,20 @@
+{
+  "name": "cli",
+  "version": "0.0.1",
+  "description": "node review project",
+  "main": "index.js",
+  "private": true,
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WATANAPEI/html-review.git"
+  },
+  "author": "shumpei WATANABE",
+  "devDependencies": {
+    "http-server": "0.12.3",
+    "commander": "^6.2.0"
+  },
+  "dependencies": {
+    "reload": "^3.1.1"
+  }
+}
