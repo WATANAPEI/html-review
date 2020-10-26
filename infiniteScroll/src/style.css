@@ -46,6 +46,7 @@ main {
         min(100ch, 100%)
         1fr;
     margin: 80px 0;
+    height: 800px;
 }
 
 main > * {
@@ -54,6 +55,8 @@ main > * {
 
 article {
     height: 40vh;
+    background-color:#fffffe;
+    margin: 0 0 20px 0;
 }
 
 footer {
