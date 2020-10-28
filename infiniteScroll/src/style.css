@@ -1,3 +1,7 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
 * {
     box-sizing: border-box;
 }
@@ -47,7 +51,6 @@ main {
         min(100ch, 100%)
         1fr;
     margin: 80px 0;
-    height: 800px;
 }
 
 main > * {
@@ -66,4 +69,6 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    bottom: 0;
 }

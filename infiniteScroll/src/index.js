@@ -1,17 +1,3 @@
-/*
-document.querySelectorAll("#main").forEach(elem => {
-    elem.onscroll = function() {
-        console.log(`scrollTop: ${this.scrollTop}, clientHeight: ${this.clientHeight}, scrollHeight: ${this.scrollHeight}`);
-        if(this.scrollTop + this.clientHeight >= ) {
-            let template = document.querySelector("#template");
-            this.appendChild(template);
-        }
-    };
-});
-*/
-let articles = Array.from(document.querySelectorAll("article"));
-let lastArticle = articles[articles.length - 1];
-
 function createElementToAppend() {
     const template = document.createElement("template");
     template.innerHTML = `
@@ -26,12 +12,25 @@ function createElementToAppend() {
 }
 
 window.addEventListener("scroll", () => {
-    let scrollVal = window.pageYOffset;
-    let lastArticleYPosition = lastArticle.getBoundingClientRect().y;
-    if(scrollVal > lastArticleYPosition) {
-        lastArticle.appendChild(createElementToAppend());
-        articles = Array.from(document.querySelectorAll("article"));
-        lastArticle = articles[articles.length - 1];
+    // absolute position of footer from page top
+    let main = getMainElem();
+    let footer = getFooterElem();
+    let footerYPosition = footer.getBoundingClientRect().top + window.pageYOffset;
+    if(ElemComeToPage(window.pageYOffset, footerYPosition, window.innerHeight)) {
+        main.appendChild(createElementToAppend());
+        footer = getFooterElem();
     }
 
 })
+
+function ElemComeToPage(scrollVal, elemYPosition, ViewportHeight) {
+    return scrollVal > (elemYPosition - ViewportHeight);
+}
+
+function getFooterElem() {
+    return document.querySelector("footer");
+}
+
+function getMainElem() {
+    return document.querySelector("main");
+}
