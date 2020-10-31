@@ -8,7 +8,7 @@ export class App {
     mount() {
         initArticles(new ArticleList());
         //addScrollListener();
-        addIntersectionObserver();
+        addIntersectionObserver(document.querySelector("footer"));
 
 
 

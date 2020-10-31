@@ -1,13 +1,12 @@
-import { createElementToAppend } from "./view-helper";
+import { renderArticle } from "./renderArticles";
+import { Article } from "../model/Article";
 
-export default function addIntersectionObserver () {
+export default function addIntersectionObserver (element: HTMLElement) {
     const option = {
         rootMargin: '-10%',
     }
     const observer = new IntersectionObserver(e => {
-        console.log("found footer");
-        let main = document.querySelector("main");
-        main.appendChild(createElementToAppend("section x", "paragraph x"));
+        renderArticle(new Article("section added by observer", "paragraph added by observer"));
     }, option);
-    observer.observe(document.querySelector("footer"));
+    observer.observe(element);
 }

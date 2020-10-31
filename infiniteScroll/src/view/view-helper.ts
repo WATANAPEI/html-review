@@ -1,4 +1,4 @@
-export function createElementToAppend(sectionText, paragraphText) {
+export function createElementToAppend(sectionText: string, paragraphText: string) {
     const template = document.createElement("template");
     template.innerHTML = `
                 <article>
@@ -9,4 +9,11 @@ export function createElementToAppend(sectionText, paragraphText) {
                 </article>
                 `;
     return template.content.firstElementChild;
+}
+
+export function createElement(html: string) :Element {
+    const template = document.createElement("template");
+    template.innerHTML = html;
+    return template.content.firstElementChild;
+
 }

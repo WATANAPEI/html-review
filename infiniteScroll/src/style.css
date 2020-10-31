@@ -72,3 +72,29 @@ footer {
     position: absolute;
     bottom: 0;
 }
+
+.modal-btn {
+    border: none;
+    border-radius: 4px;
+    color:#333;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.modal-open {
+    background-color: orangered;
+}
+
+.modal-close {
+    background-color: darkblue;
+}
+
+.modal {
+    display: none;
+}
+
+.modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
