@@ -1,6 +1,7 @@
-import { Article } from "./Article.ts";
+import { Article } from "./Article";
 
 export class ArticleList {
+    list: Article[];
     constructor() {
         this.list = [
             new Article("section 1", "paragraph 1"),
@@ -9,8 +10,8 @@ export class ArticleList {
         ];
     }
 
-    appendArticle(sectionText, paragraphText) {
+    appendArticle(sectionText: string, paragraphText: string) {
         let articleToAppend = new Article(sectionText, paragraphText);
-        this.articles.push(articleToAppend);
+        this.list.push(articleToAppend);
     }
 }
