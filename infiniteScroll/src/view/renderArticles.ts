@@ -11,9 +11,9 @@ export function initArticles(articles: ArticleList) {
 
 export function renderArticle(article: Article) {
     const html: string = `
-                <article>
+                <article class="article">
                     <section>
-                        <h2>${article.sectionText}</h2>
+                        <h2>${article.headerText}</h2>
                         <p>${article.paragraphText}</p>
                     </section>
                 </article>
