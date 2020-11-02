@@ -82,19 +82,42 @@ footer {
 }
 
 .modal-open {
-    background-color: orangered;
+    background-color: #eff0f3;
 }
 
 .modal-close {
-    background-color: darkblue;
+    background-color: #bba392;
+    color:#0d0d0d;
 }
 
 .modal {
     display: none;
 }
 
+.modal.is_open {
+    display: block;
+}
+
 .modal-overlay {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    min-width: 800px;
+}
+
+.modal-container {
+    background: gray;
+    padding: 30px 20px;
+    overflow: scroll;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content-title {
+    font-size: 2rem;
+}
+
+.modal-content-txt {
+    line-height: 1.67;
 }
