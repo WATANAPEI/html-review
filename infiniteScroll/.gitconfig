@@ -56,4 +56,4 @@
     cmd = "nvim -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
 
 [credential]
-	helper = "!f() { /home/app/.vscode-server/bin/d2e414d9e4239a252d1ab117bd7067f125afd80a/node /tmp/vscode-remote-containers-1cd308975e590be13e92271e702245a88a404fac.js $*; }; f"
+	helper = "!f() { /home/app/.vscode-server/bin/d2e414d9e4239a252d1ab117bd7067f125afd80a/node /tmp/vscode-remote-containers-2ad9bcd2618f0980a3a0f01e4d964599a1436aed.js $*; }; f"
